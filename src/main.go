@@ -1,22 +1,51 @@
 package main
 
-import (
-	"fmt"
-)
-
 func main() {
-	plantCapacities := []float64{30, 30, 30, 60, 60, 100}
 
-	capacity := plantCapacities[0] + plantCapacities[1] + plantCapacities[2]
+	if foo := 2; foo == 4 {
+		println("foobar")
+	} else {
+		println("more foobars")
+	}
 
-	fmt.Println(plantCapacities)
-	fmt.Println(capacity)
+	baz := 2
+	switch baz {
+	case 1:
+		{
+			println("bazzing")
+		}
+	case 2:
+		{
+			println("lol baz")
+		}
+	}
 
-	gridLoad := 75.
+	for iterator := 0; iterator < 5; iterator++ {
+		println(iterator)
+	}
 
-	utilization := gridLoad / capacity
+	j := 0
+	for {
+		j++
+		println(j)
+		if j == 5 {
+			break
+		}
+	}
 
-	fmt.Printf("Capacity: %v\n", capacity)
-	fmt.Printf("Utilization: %.2f\n", utilization*100)
+	slice := []string{"foo", "bar", "baz"}
 
+	for index, value := range slice {
+		println(index, value)
+	}
+
+	dictionary := make(map[string]string)
+
+	dictionary["first"] = "foo"
+	dictionary["second"] = "bar"
+	dictionary["third"] = "baz"
+
+	for key, value := range dictionary {
+		println(key, value)
+	}
 }
