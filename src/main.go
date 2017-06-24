@@ -1,45 +1,22 @@
 package main
 
+import (
+	"fmt"
+)
+
 func main() {
-	var myInt int
-	myInt = 1337
-	println(myInt)
+	plantCapacities := []float64{30, 30, 30, 60, 60, 100}
+
+	capacity := plantCapacities[0] + plantCapacities[1] + plantCapacities[2]
+
+	fmt.Println(plantCapacities)
+	fmt.Println(capacity)
+
+	gridLoad := 75.
+
+	utilization := gridLoad / capacity
+
+	fmt.Printf("Capacity: %v\n", capacity)
+	fmt.Printf("Utilization: %.2f\n", utilization*100)
+
 }
-
-// package main
-
-// const (
-// 	first = iota
-// 	second
-// )
-
-// const (
-// 	third = iota
-// )
-
-// func main() {
-
-// 	println(first)
-// 	println(second)
-// 	println(third)
-
-// 	var myInt int
-// 	myInt = 42
-
-// 	println(myInt)
-
-// 	var myFloat32 float32
-// 	myFloat32 = 33.22
-
-// 	println(myFloat32)
-
-// 	myString := "Hello Go!"
-
-// 	println(myString)
-
-// 	myComplex := complex(2, 3)
-
-// 	println(myComplex)
-// 	println(real(myComplex), imag(myComplex))
-
-// }
