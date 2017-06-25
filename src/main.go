@@ -4,18 +4,6 @@ import (
 	"fmt"
 )
 
-// func calculateCapacity(activePlants []int, plantCapacities []float64) float64 {
-// 	capacity := 0.
-// 	for _, plantID := range activePlants {
-// 		capacity += plantCapacities[plantID]
-// 	}
-// 	return capacity
-// }
-
-// func getUtilization(capacity float64, load float64) float64 {
-// 	return capacity / load * 100
-// }
-
 func getCapacity(activePlants []int, plantCapacities []float64) func(float64) float64 {
 	capacity := 0.
 	for _, plantID := range activePlants {
@@ -23,7 +11,7 @@ func getCapacity(activePlants []int, plantCapacities []float64) func(float64) fl
 	}
 
 	return func(gridLoad float64) float64 {
-		return capacity / gridLoad * 100
+		return getUtilization(capacity, gridLoad)
 	}
 }
 
