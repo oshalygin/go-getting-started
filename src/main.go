@@ -8,7 +8,7 @@ func main() {
 
 	plantCapacities := []float64{30, 30, 30, 60, 60, 100}
 	activePlants := []int{0, 1}
-	gridLoad := 75.
+	gridLoad := 75.0
 
 	fmt.Println("1) Generate Power Plant Report")
 	fmt.Println("2) Generate power Grid Report")
@@ -30,9 +30,12 @@ func main() {
 		}
 
 		utilization := capacity / gridLoad * 100
-		fmt.Printf("%-20s%.0f\n", "Capacity: ", capacity)
-		fmt.Printf("%-20s%.0f\n", "Load: ", gridLoad)
-		fmt.Printf("%-20s%.1f\n", "Utilization: ", utilization)
-	}
 
+		// Output
+		fmt.Printf("%-20s%v\n", "Capacity: ", capacity)
+		fmt.Printf("%-20s%v\n", "Load: ", gridLoad)
+		fmt.Printf("%-20s%.1f %%\n", "Utilization: ", utilization)
+	default:
+		fmt.Println("I have no idea what you entered")
+	}
 }
