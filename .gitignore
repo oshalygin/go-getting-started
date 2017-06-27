@@ -19,3 +19,6 @@ debug
 
 # binaries
 bin/
+
+# IntelliJ files
+.idea/
