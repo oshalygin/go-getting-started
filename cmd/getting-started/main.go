@@ -3,11 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	firstValue := 8
-	secondValue := 5
-	result := add(firstValue, secondValue)
-	fmt.Printf("Result: %v", result)
+
+	firstValue, secondValue := swap(1, 2)
+
+	fmt.Printf("firstValue: %v\n", firstValue)
+	fmt.Printf("secondValue: %v\n", secondValue)
 }
-func add(firstValue, secondValue int) int {
-	return firstValue + secondValue
+
+func swap(firstValue int, secondValue int) (int, int) {
+	return secondValue, firstValue
 }
