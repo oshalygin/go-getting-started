@@ -2,16 +2,9 @@ package main
 
 import "fmt"
 
+var c, ptyhon, java bool
+
 func main() {
-
-	firstValue, secondValue := split(50.00)
-	fmt.Printf("First Value: %v\n", firstValue)
-	fmt.Printf("Second Value: %v\n", secondValue)
-
-}
-
-func split(total float64) (firstValue float64, secondValue float64) {
-	firstValue = total / 2
-	secondValue = total / 2
-	return
+	var csharp int
+	fmt.Printf("%v %v %v %v", csharp, c, ptyhon, java)
 }
