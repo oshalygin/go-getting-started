@@ -8,6 +8,6 @@ func main() {
 	result := add(firstValue, secondValue)
 	fmt.Printf("Result: %v", result)
 }
-func add(firstValue int, secondValue int) int {
+func add(firstValue, secondValue int) int {
 	return firstValue + secondValue
 }
