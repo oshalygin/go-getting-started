@@ -4,12 +4,14 @@ import "fmt"
 
 func main() {
 
-	firstValue, secondValue := swap(1, 2)
+	firstValue, secondValue := split(50.00)
+	fmt.Printf("First Value: %v\n", firstValue)
+	fmt.Printf("Second Value: %v\n", secondValue)
 
-	fmt.Printf("firstValue: %v\n", firstValue)
-	fmt.Printf("secondValue: %v\n", secondValue)
 }
 
-func swap(firstValue int, secondValue int) (int, int) {
-	return secondValue, firstValue
+func split(total float64) (firstValue float64, secondValue float64) {
+	firstValue = total / 2
+	secondValue = total / 2
+	return
 }
